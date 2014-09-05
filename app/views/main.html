@@ -19,7 +19,7 @@
   <!-- list em out -->
   <div class="viruses" ui-sortable ng-model="viruses">
     <h4>List of Viruses:</h4>
-    <div class="list" ng-repeat="virus in viruses track by $index">
+    <div class="list" ng-repeat="virus in viruses | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
       <div class="list-item">
         <button class="btn btn-danger" ng-click="remove($index)" aria-label="Remove">x</button>
         <button class="btn edit" ng-click="goto($index)" aria-label="Edit">edit</button>
@@ -33,4 +33,6 @@
   </div>
 
   <!-- pagination -->
+  <button ng-hide="pagination.page == 0" ng-click="pagination.prevPage()">Previous</button>
+  <button ng-hide="pagination.page + 1 >= pagination.numPages" ng-click="pagination.nextPage()">Next</button>
 </div>

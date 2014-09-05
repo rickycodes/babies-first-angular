@@ -8,18 +8,18 @@
  * Controller of the virusApp, add and remove virus to localStorage
  */
 angular.module('virusApp')
-  .controller('MainCtrl', function ($scope,$location,$window) {
+  .controller('MainCtrl', function($scope, $window, $location, Pagination) {
 
-    /*
-    TODO:
-      Add pagination
-    */
+    // paginate
+    $scope.pagination = Pagination.getNew(10);
 
     // check localStorage for existing viruses
     $scope.saved = localStorage.getItem('viruses');
 
     // if viruses exist, parse em/set em. Otherwise, make it an empty array
     $scope.viruses = ($scope.saved !== null) ? JSON.parse($scope.saved) : [];
+
+    $scope.pagination.numPages = Math.ceil($scope.viruses.length/$scope.pagination.perPage);
 
     // levels of severity
     $scope.levels = [

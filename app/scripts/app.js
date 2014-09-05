@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.sortable',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'simplePagination'
   ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');
