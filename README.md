@@ -19,3 +19,5 @@ After all dependencies are installed:
 `grunt build` to build the app into `/dist` for deployment
 
 ## TODO
+
+Tests
