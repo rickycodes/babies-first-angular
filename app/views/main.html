@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h4>All of the viruses! ;)~~</h4>
+
+  <!-- input -->
+  <form role="form" ng-submit="add()">
+    <input type="text" ng-model="name" placeholder="name" class="form-control">
+    <input type="text" ng-model="description" placeholder="description" class="form-control">
+    <label for="level">severity</label>
+    <select id="level" ng-model="newlevel" ng-options="obj.name for obj in levels">
+      <option class="disabled" value="">choose a level</option>
+    </select>
+    <input type="date" ng-model="date" class="form-control">
+    <input type="submit" class="btn btn-primary" value="Add">
+  </form>
+
+  <hr />
+
+  <!-- list em out -->
+  <div class="viruses" ui-sortable ng-model="viruses">
+    <h4>List of Viruses:</h4>
+    <div class="list" ng-repeat="virus in viruses track by $index">
+      <div class="list-item">
+        <button class="btn btn-danger" ng-click="remove($index)" aria-label="Remove">x</button>
+        <button class="btn edit" ng-click="goto($index)" aria-label="Edit">edit</button>
+        <br />
+        <strong>name:</strong> {{ virus.name }} <br />
+        <strong>description:</strong> {{ virus.description }} <br />
+        <strong>level:</strong> {{ virus.level }} <br />
+        <strong>discovery date:</strong> {{ virus.date }} <br />
+      </div>
+    </div>
+  </div>
+
+  <!-- pagination -->
+</div>
