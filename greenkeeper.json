@@ -1,0 +1,14 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "bower_components/angular-local-storage/package.json",
+        "bower_components/bootstrap-sass-official/package.json",
+        "bower_components/es5-shim/package.json",
+        "bower_components/jquery-ui/package.json",
+        "bower_components/ng-simplePagination/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
