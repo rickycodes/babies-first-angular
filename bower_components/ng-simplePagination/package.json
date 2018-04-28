@@ -5,8 +5,8 @@
   "author": "Svilen Gospodinov <svilen.gospodinov@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "karma": "^0.12.19",
-    "karma-jasmine": "^0.1.5",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma": "^2.0.2",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4"
   }
 }
