@@ -1,5 +1,7 @@
 ## DETAILS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rickycodes/babies-first-angular.svg)](https://greenkeeper.io/)
+
 Just a small 'hello world' Angular app  
 preview: http://ricky.expert/virus/
 
